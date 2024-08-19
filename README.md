@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+#################################################################
+
+- there are two ways to tap the values in the input box 
+ - useState variable
+ - useref hook
+ - firebase
+    - onAuthStateChanged
+    - createUserWithEmailAndPassword
+    - sing in api
+    - set up firebase firebase deployment
+
+<!-- on click of signout redux is not being emptied check that -->
