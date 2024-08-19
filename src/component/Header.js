@@ -42,7 +42,7 @@ const Header = () => {
     });
   }, []);
   return (
-    <div className="flex justify-between w-screen z-10 absolute bg-gradient-to-b from-black">
+    <div className="flex justify-between w-full z-10 absolute bg-gradient-to-b from-black">
       <div className="m-4 mx-4 md:mx-16 w-40 overflow-hidden">
         <img
           className="w-full h-full object-contain"
