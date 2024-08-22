@@ -1,10 +1,12 @@
+import { useSelector } from "react-redux";
 import useGetPopularMovies from "../hooks/useGetPopularMovies";
 import useGetTopRatedMovies from "../hooks/useGetTopRatedMovies";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import useUpComingMovies from "../hooks/useUpComingMovies";
-import Header from "./Header"
+import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import GptContainer from "./GptContainer";
 
 const Browse = () => {
   useNowPlayingMovies();
@@ -12,11 +14,21 @@ const Browse = () => {
   useUpComingMovies();
   useGetTopRatedMovies();
 
+  const gptView = useSelector((state) => state.useGpt.showGpt);
+  // console.log(gptView);
+    
+
   return (
-    <div className="bg-black">
+    <div className="">
       <Header />
-      <MainContainer/>
-      <SecondaryContainer/> 
+      {gptView ? (
+        <GptContainer />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 };
